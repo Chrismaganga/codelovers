@@ -1,36 +1,32 @@
 {
+  "name": "codelovers",
+  "version": "0.1.0",
   "private": true,
-  "sideEffects": false,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
-    "typecheck": "tsc"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@remix-run/css-bundle": "^1.18.1",
-    "@remix-run/node": "^1.18.1",
-    "@remix-run/react": "^1.18.1",
-    "@remix-run/vercel": "^1.18.1",
-    "@vercel/node": "^2.10.3",
-    "isbot": "^3.6.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@remix-run/dev": "^1.18.1",
-    "@remix-run/eslint-config": "^1.18.1",
-    "@remix-run/serve": "^1.18.1",
-    "@types/react": "^18.0.35",
-    "@types/react-dom": "^18.0.11",
-    "autoprefixer": "^10.4.14",
-    "concurrently": "^8.2.0",
-    "eslint": "^8.38.0",
-    "postcss": "^8.4.26",
-    "prisma": "^5.0.0",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.0.4"
-  },
-  "engines": {
-    "node": ">=14.0.0"
+    "@clerk/nextjs": "^4.23.1",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.17",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12",
+    "lucide-react": "^0.263.1",
+    "next": "13.4.12",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "3.3.3",
+    "tailwindcss-animate": "^1.0.6",
+    "typescript": "5.1.6"
   }
 }
