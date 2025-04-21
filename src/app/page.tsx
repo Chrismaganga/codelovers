@@ -71,8 +71,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* <Footer /> */}
+=======
+>>>>>>> abf132500d4e197aeb621c2d69cebc2048648e21
     </div>
   );
 }
