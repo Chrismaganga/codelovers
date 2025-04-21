@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import React from 'react';
 
 const footerLinks = {
   about: [
@@ -22,6 +24,34 @@ const footerLinks = {
     { name: "Media", href: "/contact/media" },
   ],
 };
+
+const socialLinks = [
+  {
+    name: "Instagram",
+    href: "https://instagram.com",
+    icon: "/images/Instagram-1.png"
+  },
+  {
+    name: "TikTok",
+    href: "https://tiktok.com",
+    icon: "/images/tiktok-1.png"
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com",
+    icon: "/images/Linkedin-1.png"
+  },
+  {
+    name: "Facebook",
+    href: "https://facebook.com",
+    icon: "/images/FB3.png"
+  },
+  {
+    name: "YouTube",
+    href: "https://youtube.com",
+    icon: "/images/youtube-1.png"
+  }
+];
 
 export function Footer() {
   return (
@@ -97,10 +127,32 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-200 pt-8">
-          <p className="text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} CodeLovers University. All rights reserved.
-          </p>
+        <div className="mt-8 border-t border-gray-700 pt-8">
+          <div className="flex flex-col items-center">
+            <div className="flex space-x-6 mb-6">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  <Image
+                    src={social.icon}
+                    alt={social.name}
+                    width={24}
+                    height={24}
+                    className="hover:opacity-75 transition-opacity"
+                  />
+                </a>
+              ))}
+            </div>
+            <p className="text-center text-gray-400 text-sm">
+              © {new Date().getFullYear()} CodeLovers University. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

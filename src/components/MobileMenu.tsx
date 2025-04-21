@@ -10,7 +10,7 @@ const navigationItems = [
   { name: "Academics", href: "/academics" },
   { name: "Research", href: "/research" },
   { name: "Admissions", href: "/admissions" },
-  { name: "Campus Life", href: "/campus-life" },
+  { name: "College Lifestyle", href: "/college-life style" },
 ];
 
 export function MobileMenu() {
