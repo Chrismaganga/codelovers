@@ -51,7 +51,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-6 text-center">Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="card text-center">
-              <h3 className="text-xl font-bold mb-2">Dr. Sarah Johnson</h3>
+              <h3 className="text-xl font-bold mb-2">Dr. Chris Maganga</h3>
               <p className="text-gray-600">President</p>
             </div>
             <div className="card text-center">
