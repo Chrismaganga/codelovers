@@ -41,11 +41,11 @@ const securityLinks = [
 ];
 
 const websiteLinks = [
-  { name: "Harvard.edu", href: "https://harvard.edu" },
-  { name: "Harvard Gazette", href: "https://news.harvard.edu" },
-  { name: "Harvard Magazine", href: "https://harvardmagazine.org" },
-  { name: "Harvard Divinity School", href: "https://hds.harvard.edu" },
-  { name: "Harvard Extension School", href: "https://extension.harvard.edu" },
+  { name: "CodeLovers", href: "https://codelovers.com" },
+  { name: " CodeloversGazette", href: "https://news.com" },
+  { name: "CodeLovers Magazine", href: "https://codeloversmagazine.org" },
+  { name: " CodeLovers Divinity School", href: "https://cds.codelovers.com" },
+  { name: "Codelovers Extension School", href: "https://extension.codelovers.com" },
 ];
 
 const contactLinks = [

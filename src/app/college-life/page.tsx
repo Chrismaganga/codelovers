@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function CampusLifePage() {
-  const campusFeatures = [
+export default function CollegeLifePage() {
+  const collegeFeatures = [
     {
       title: "Student Clubs",
       description: "Join one of our many tech-focused student organizations.",
@@ -38,7 +38,7 @@ export default function CampusLifePage() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white">Campus Life</h1>
+          <h1 className="text-4xl font-bold text-white">College Life</h1>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function CampusLifePage() {
         <div className="mt-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Campus Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {campusFeatures.map((feature, index) => (
+            {collegeFeatures.map((feature, index) => (
               <div key={index} className="card overflow-hidden">
                 <div className="relative h-48">
                   <Image
