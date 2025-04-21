@@ -1,133 +1,148 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from 'react';
+import React from "react";
 
-const footerLinks = {
-  about: [
-    { name: "History", href: "/about/history" },
-    { name: "Leadership", href: "/about/leadership" },
-    { name: "Schools", href: "/about/schools" },
-  ],
-  academics: [
-    { name: "Programs", href: "/academics/programs" },
-    { name: "Courses", href: "/academics/courses" },
-    { name: "Research", href: "/academics/research" },
-  ],
-  resources: [
-    { name: "Library", href: "/resources/library" },
-    { name: "Museums", href: "/resources/museums" },
-    { name: "Events", href: "/resources/events" },
-  ],
-  contact: [
-    { name: "Directory", href: "/contact/directory" },
-    { name: "News", href: "/contact/news" },
-    { name: "Media", href: "/contact/media" },
-  ],
-};
+const newsItems = [
+  {
+    id: 1,
+    image: "/images/100408_Yard_045-1200x630.jpg",
+    title: "Groundbreaking Research Discovery",
+    description:
+      "CodeLovers scientists make significant breakthrough in quantum computing",
+    alt: "Research Breakthrough",
+    link: "/news/research-breakthrough",
+  },
+  {
+    id: 2,
+    image: "/images/051220_features_1192.jpg",
+    title: "Student Innovation Award",
+    description:
+      "CodeLovers students win prestigious international competition",
+    alt: "Student Achievement",
+    link: "/news/student-innovation",
+  },
+  {
+    id: 3,
+    image: "/images/092418_Dental_School_079.jpg",
+    title: "Annual Tech Conference",
+    description:
+      "CodeLovers triumph in international coding competition",
+    alt: "Campus Event",
+    link: "/news/tech-conference",
+  },
+];
+
+const securityLinks = [
+  { name: "Accessibility", href: "/accessibility" },
+  { name: "Digital Accessibility", href: "/digital-accessibility" },
+  { name: "Privacy Statement", href: "/privacy" },
+  { name: "Copyright", href: "/copyright" },
+  { name: "Trademark Notice", href: "/trademark" },
+];
+
+const websiteLinks = [
+  { name: "Harvard.edu", href: "https://harvard.edu" },
+  { name: "Harvard Gazette", href: "https://news.harvard.edu" },
+  { name: "Harvard Magazine", href: "https://harvardmagazine.org" },
+  { name: "Harvard Divinity School", href: "https://hds.harvard.edu" },
+  { name: "Harvard Extension School", href: "https://extension.harvard.edu" },
+];
+
+const contactLinks = [
+  { name: "Contact Us", href: "/contact" },
+  { name: "Maps & Directions", href: "/maps" },
+  { name: "Campus Tours", href: "/tours" },
+  { name: "Jobs", href: "/jobs" },
+  { name: "Emergency", href: "/emergency" },
+];
 
 const socialLinks = [
   {
     name: "Instagram",
     href: "https://instagram.com",
-    icon: "/images/Instagram-1.png"
+    icon: "/images/Instagram-1.png",
   },
   {
     name: "TikTok",
     href: "https://tiktok.com",
-    icon: "/images/tiktok-1.png"
+    icon: "/images/tiktok-1.png",
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com",
-    icon: "/images/Linkedin-1.png"
+    icon: "/images/Linkedin-1.png",
   },
   {
     name: "Facebook",
     href: "https://facebook.com",
-    icon: "/images/FB3.png"
+    icon: "/images/FB3.png",
   },
   {
     name: "YouTube",
     href: "https://youtube.com",
-    icon: "/images/youtube-1.png"
-  }
+    icon: "/images/youtube-1.png",
+  },
 ];
 
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Security & Brand Section */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              About
-            </h3>
-            <ul className="mt-4 space-y-4">
-              {footerLinks.about.map((item) => (
-                <li key={item.name}>
+            <h3 className="text-lg font-semibold mb-4">Security & Brand</h3>
+            <ul className="space-y-2">
+              {securityLinks.map((link) => (
+                <li key={link.name}>
                   <Link
-                    href={item.href}
-                    className="text-base text-gray-300 hover:text-white"
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    {item.name}
+                    {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Website Section */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Academics
-            </h3>
-            <ul className="mt-4 space-y-4">
-              {footerLinks.academics.map((item) => (
-                <li key={item.name}>
+            <h3 className="text-lg font-semibold mb-4">Website</h3>
+            <ul className="space-y-2">
+              {websiteLinks.map((link) => (
+                <li key={link.name}>
                   <Link
-                    href={item.href}
-                    className="text-base text-gray-300 hover:text-white"
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    {item.name}
+                    {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Get In Touch Section */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Resources
-            </h3>
-            <ul className="mt-4 space-y-4">
-              {footerLinks.resources.map((item) => (
-                <li key={item.name}>
+            <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
+            <ul className="space-y-2">
+              {contactLinks.map((link) => (
+                <li key={link.name}>
                   <Link
-                    href={item.href}
-                    className="text-base text-gray-300 hover:text-white"
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Contact
-            </h3>
-            <ul className="mt-4 space-y-4">
-              {footerLinks.contact.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-base text-gray-300 hover:text-white"
-                  >
-                    {item.name}
+                    {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-700 pt-8">
+
+        {/* Social Media Links */}
+        <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col items-center">
             <div className="flex space-x-6 mb-6">
               {socialLinks.map((social) => (
@@ -157,4 +172,4 @@ export function Footer() {
       </div>
     </footer>
   );
-} 
+}
